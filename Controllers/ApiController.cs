@@ -10,7 +10,7 @@ namespace MSIT133Site.Controllers
     {
         public IActionResult Index(string userName,string age)
         {
-            System.Threading.Thread.Sleep(5000);
+            System.Threading.Thread.Sleep(10000);
             if (String.IsNullOrEmpty(userName))
             {
                 userName = "Ajax";
