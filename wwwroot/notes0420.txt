@@ -1,0 +1,51 @@
+4/20
+4/21 AM
+4/22
+4/25
+4/26
+
+09:00 - 10:30
+10:45 - 12:00
+
+13:30 - 15:00
+15:15 - 17:00
+
+關聯式資料庫
+SQL Server 
+MySQL
+Oracle
+DB2
+...
+...
+
+非關聯式資料庫NoSQL
+MongoDB
+
+網站伺服器?
+IIS Express > 本機存取
+IIS  > C#
+Apache  >  php
+Tomcat  >  Java
+
+瀏覽器
+Edge
+Chrome
+Firefox
+....
+
+
+1. ADO.NET
+2. Entity Framework 
+
+ORM??
+ORMapping
+ Entity Framework
+ Dapper
+ Hibernate(Java)
+ NHibernate
+
+ 
+
+   LINQ to Dataset
+   LINQ to Entity
+   LINQ to ??

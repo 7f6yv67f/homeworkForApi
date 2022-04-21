@@ -1,0 +1,32 @@
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) 
+Chrome/100.0.4896.127 Safari/537.36
+
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) 
+AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
+
+text/html
+
+GET http://www.google.com
+POST http://www.google.com
+
+W3C => HTML、CSS
+ECMA => Script Language
+WHATAG => JavaScript API 
+
+標準 > 實作
+
+2005 > XMLHttpRequest API(onreadystatechange)   >  XMLHttpRequest advanced features  > fetch
+
+
+Enables these commonly used commands:
+Add-Migration
+Drop-Database
+Get-DbContext
+Get-Migration
+Remove-Migration
+Scaffold-DbContext
+Script-Migration
+Update-Database
+
+
+Scaffold-DbContext "Data Source=.;Initial Catalog=Demo;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
