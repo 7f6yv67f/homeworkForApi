@@ -4,13 +4,17 @@
 }
 
 <h1>FirstAjax</h1>
+<input type="text" placeholder="user name" id="inputName" />
+<input type="number" placeholder="user age" id="inputAge"/>
 <input type="button" value="Ajax" id="button1" />
 <div id="div1"></div>
 
-@section Scripts{ 
+@section Scripts{
     <script>
         const btn = document.querySelector('#button1');
         const divMessage = document.querySelector('#div1');
+        const txtName = document.querySelector('#inputName');
+        const txtAge = document.querySelector('#inputAge');
         btn.addEventListener('click', () => {
             //步驟一建立Ajax物件
             const xhr = new XMLHttpRequest();
@@ -19,11 +23,11 @@
             //load事件表示伺服器已經回傳結果到Client端了
             xhr.addEventListener("load", () => {
                 //接收結果顯示在div中
-                divMessage.innerHTML=xhr.responseText;
+                divMessage.innerHTML = xhr.responseText;
             })
 
             //步驟二對伺服器發出要求(Request)
-            xhr.open("GET", "/api/index?userName=Tracy楊&age=21"); //打開瀏覽器輸入網址
+            xhr.open("GET", `/api/index?userName=${txtName.value}&age=${txtAge.value}`); //打開瀏覽器輸入網址
             xhr.send(); //Enter鍵
 
         })
@@ -31,7 +35,7 @@
 
 
 
-        
+
 
     </script>
 }
