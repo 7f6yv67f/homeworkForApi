@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "FirstAjax";
+}
+
+<h1>FirstAjax</h1>
+<input type="button" value="Ajax" id="button1" />
+<div id="div1"></div>
+
+@section Scripts{ 
+    <script>
+        const btn = document.querySelector('#button1');
+        const divMessage = document.querySelector('#div1');
+        btn.addEventListener('click', () => {
+            //步驟一建立Ajax物件
+            const xhr = new XMLHttpRequest();
+
+            //步驟三接收伺服器回傳的結果(Response)
+            //load事件表示伺服器已經回傳結果到Client端了
+            xhr.addEventListener("load", () => {
+                //接收結果顯示在div中
+                divMessage.innerHTML=xhr.responseText;
+            })
+
+            //步驟二對伺服器發出要求(Request)
+            xhr.open("GET", "/api/index");
+            xhr.send();
+
+        })
+
+
+
+
+        
+
+    </script>
+}
+
+
