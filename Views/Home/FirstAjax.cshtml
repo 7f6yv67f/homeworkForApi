@@ -6,7 +6,7 @@
 <h1>FirstAjax</h1>
 <input type="text" placeholder="user name" id="inputName" />
 <input type="number" placeholder="user age" id="inputAge"/>
-<input type="button" value="Ajax" id="button1" />
+<input type="button" value="Load" id="button1" />
 <div id="div1"></div>
 
 @section Scripts{
@@ -22,8 +22,23 @@
             //步驟三接收伺服器回傳的結果(Response)
             //load事件表示伺服器已經回傳結果到Client端了
             xhr.addEventListener("load", () => {
-                //接收結果顯示在div中
-                divMessage.innerHTML = xhr.responseText;
+                //接收結果
+                const data = xhr.responseText;
+                //顯示在div中
+                divMessage.innerHTML = data;
+                console.log("load")
+            })
+            //ajax 開始
+            xhr.addEventListener('loadstart', () => {
+                console.log("loadstart")
+                btn.value = "loading...";
+                btn.setAttribute('disabled', 'disabled');
+            })
+            //ajax 結束
+            xhr.addEventListener('loadend', () => {
+                console.log("loadend")
+                btn.value = "Load";
+                btn.removeAttribute('disabled');
             })
 
             //步驟二對伺服器發出要求(Request)
