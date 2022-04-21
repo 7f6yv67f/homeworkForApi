@@ -8,9 +8,13 @@ namespace MSIT133Site.Controllers
 {
     public class ApiController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string userName,string age)
         {
-            return Content("Hello Ajax", "text/plain");
+            if (String.IsNullOrEmpty(userName))
+            {
+                userName = "Ajax";
+            }
+            return Content($"Hello {userName}, You are {age} years old.", "text/plain", System.Text.Encoding.UTF8);
         }
     }
 }
